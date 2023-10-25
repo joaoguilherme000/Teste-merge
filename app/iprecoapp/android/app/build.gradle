@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "br.com.ipreco"
+    namespace "com.iprecoapp"
     defaultConfig {
-        applicationId "br.com.ipreco"
+        applicationId "com.iprecoapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
