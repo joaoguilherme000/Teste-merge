@@ -1,59 +1,79 @@
-<h1> Tutorial</h1>
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-<h2>Uma biblioteca que foi usada no app é a react native navigation, documentação abaixo (se quiser ler)🌝</h2>
+# Getting Started
 
-[REACT NATIVE NAVIGATION](https://reactnavigation.org/).
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-<h4>app.tsx</h4>
+## Step 1: Start the Metro Server
 
-```
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SplashScreen from 'react-native-splash-screen';
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-import Home from './src/views/home';
-import Result from './src/views/result';
+To start Metro, run the following command from the _root_ of your React Native project:
 
-```
+```bash
+# using npm
+npm start
 
-<h4>importações e o que são elas?</h4>
-
-a primeira coisa de um componente é suas importações, nela outros componentes são importados para dentro do arquivo para serem usados do jeito que você quiser.
-
-`* as React from 'react'` Isso importa todas as funcionalidades do módulo 'React' e as torna acessíveis, perceba que exite um padrão depois do from as bibliotecas e componentes também precisam conter `"` ou `'` entre elas (voce escolhe😁).
-
-```
-import Home from './src/views/home';
-import Result from './src/views/result';
+# OR using Yarn
+yarn start
 ```
 
-### Essas duas belezinhas chama funções que eu tenho em outro arquivo com tudo que tem dentro do arquivo _`estilo, outras funções, importações, outros arquivos`_ (não precisa ser necessariamente o nome do arquivo somente o nome da função principal).
+## Step 2: Start your Application
 
-```
-function App() {
-  SplashScreen.hide();
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
-        <Stack.Screen name="Result" component={Result} options={{ headerShown: false }}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+### For Android
 
-export default App;
+```bash
+# using npm
+npm run android
 
+# OR using Yarn
+yarn android
 ```
 
-eu crio uma função que se chama app ele retorna para o usuario um estrutura de telas, e no final eu exporto para outro componente fazer uso dele👌.
+### For iOS
 
-+ importo uma função `import SplashScreen from 'react-native-splash-screen';` uso ela depois `SplashScreen.hide();` a splash some só depois que o aplicativo é carregado
+```bash
+# using npm
+npm run ios
 
-+ Quando você envolve seu aplicativo com `<NavigationContainer>`, você configura a estrutura básica para gerenciar a navegação. Você pode usar outros componentes do React Navigation, como `<StackNavigator>, <TabNavigator>, ou <DrawerNavigator>`, dentro desse contêiner para definir a estrutura e o comportamento da navegação em seu aplicativo.
+# OR using Yarn
+yarn ios
+```
 
-+ importo um componente`import { createNativeStackNavigator } from '@react-navigation/native-stack';` uso ele e passo uma propriedade que é a primeira tela que ele vai ler `<Stack.Navigator initialRouteName="Home">`
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-+ depois eu coloco as minhas telas passando o nome e o componente sendo ele de mesmo nome que foi importado `<Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>` uma outra propriedade passada nessa tela foi a options que também recebe propriedades, nesse caso eu tirei o cabeçalho.
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+
+## Step 3: Modifying your App
+
+Now that you have successfully run the app, let's modify it.
+
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+
+## Congratulations! :tada:
+
+You've successfully run and modified your React Native App. :partying_face:
+
+### Now what?
+
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+
+# Troubleshooting
+
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

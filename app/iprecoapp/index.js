@@ -1,5 +1,5 @@
 /**
- *  iPeços - Mais por menos
+ *  iPreço - Busque compare economize
  */
 
 import {AppRegistry} from 'react-native';
